@@ -20,7 +20,6 @@ Rails.application.routes.draw do
   }
 
   devise_for :users, path: 'account', controllers: {
-    registrations: :account,
     sessions: :sessions,
     passwords: :passwords,
     omniauth_callbacks: 'auth/omniauth_callbacks'
@@ -28,8 +27,6 @@ Rails.application.routes.draw do
 
   resource :setting do
     member do
-      get :account
-      get :password
       get :profile
       get :reward
     end
