@@ -19,9 +19,8 @@ Rails.application.routes.draw do
     path: /[\w\d\.\/]+/i
   }
 
-  devise_for :users, path: 'account', controllers: {
+  devise_for :users, path: 'account',skip:[:registrations,:passwords], controllers: {
     sessions: :sessions,
-    passwords: :passwords,
     omniauth_callbacks: 'auth/omniauth_callbacks'
   }
 
@@ -33,14 +32,14 @@ Rails.application.routes.draw do
   end
 
   # SSO
-  namespace :auth do
-    resource :sso, controller: 'sso' do
-      collection do
-        get :login
-        get :provider
-      end
-    end
-  end
+  #namespace :auth do
+  #  resource :sso, controller: 'sso' do
+  #    collection do
+  #      get :login
+  #      get :provider
+  #    end
+  #  end
+  # end
 
   delete 'setting/auth/:provider', to: 'settings#auth_unbind'
 
