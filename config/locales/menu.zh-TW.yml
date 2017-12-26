@@ -17,7 +17,7 @@
     uploading: "正在上傳"
     published_at: "發表於"
     register: "註冊"
-    login: "登錄"
+    login: "登錄／註冊"
     logining: "正在登錄"
     logout: "退出"
     remember_me: "記住登錄狀態（60 天）"

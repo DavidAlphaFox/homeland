@@ -17,7 +17,7 @@
     uploading: "正在上传"
     published_at: "发表于"
     register: "注册"
-    login: "登录"
+    login: "登录／注册"
     logining: "正在登录"
     logout: "退出"
     remember_me: "记住登录状态（60 天）"
