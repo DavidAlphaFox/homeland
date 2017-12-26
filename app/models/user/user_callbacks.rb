@@ -3,7 +3,7 @@ class User
     extend ActiveSupport::Concern
 
     included do
-      after_commit :send_welcome_mail, on: :create
+      #after_commit :send_welcome_mail, on: :create
       before_save :store_location
     end
 
